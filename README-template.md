@@ -40,17 +40,18 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Add solution URL here](https://github.com/Zeus-The-Cat/advice-generator-app-main)
 - Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
 ## My process
+- Expected Dev time 4 hrs
+- Actual Dev time   x hrs
 
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
 - Flexbox
-- CSS Grid
+- SASS
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
 - [Next.js](https://nextjs.org/) - React framework
