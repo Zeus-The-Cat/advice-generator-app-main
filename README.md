@@ -20,7 +20,7 @@ This is a solution to the [Advice generator app challenge on Frontend Mentor](ht
 
 Users should be able to:
 
-- 
+- Click the Green button to request a new Quote (doesn't work not sure why)
 
 ### Screenshot
 - Desktop Version
