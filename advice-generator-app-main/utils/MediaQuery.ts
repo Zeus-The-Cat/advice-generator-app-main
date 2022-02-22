@@ -5,7 +5,7 @@ import { useState, useCallback, useEffect } from 'react'
  * @param width - smallest/largest screen size
  * @returns {Boolean} - React State true if RealWidth < width
  */
-export const useMediaQuery = (width) => {
+export const useMediaQuery = (width:number) => {
     const [targetReached, setTargetReached] = useState(false)
     
     const updateTarget = useCallback((e) => {
