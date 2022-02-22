@@ -17,13 +17,13 @@ const Card = styled.div`
 const AdviceHeader = styled.h3`
     text-align: center;
     letter-spacing: 3px;
-    font-size:0.85rem;
+    font-size:clamp(0.85rem,2vw,1rem);
     font-weight:600;
     color:#56fea9;
 `
 const Quote = styled.h2`
     font-weight:600;
-    font-size:clamp(0.75rem,2vw,2rem);
+    font-size:clamp(1.5rem,2vw,2rem);
     text-align:center;
     color: #f0f0f0;
     max-width:350px;

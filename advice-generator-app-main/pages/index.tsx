@@ -2,26 +2,36 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import styled from 'styled-components'
+import { useMediaQuery } from '../utils/MediaQuery'
 
 // Custom Components
 import { AdviceCard } from '../components/AdviceCard'
-
 const Container = styled.div`
   width:100%;
   margin:0px;
   height:100vh;
   background: #f0f0f0;
-  padding-left:50px;
+  padding-left:6.25vw;
   display:flex;
   flex-direction:column;
   align-items:flex-start;
+`
+const MobileContainer = styled.div`
+  width:100%;
+  margin:0px;
+  height:100vh;
+  background: #202632;
+  padding:6.25vw;
+  padding-top:20vh;
+  display:flex;
+  flex-direction:column;
 `
 const Squiggle = styled.div`
   align-self:flex-end
 `
 const MainBlock = styled.div`
   background: #202632;
-  width:90vw;
+  width:87.5vw;
   height:70vh;
   display:flex;
   justify-content:center;
@@ -36,32 +46,41 @@ const LowerContainer = styled.div`
   padding-right:8vw;
 `
 const Home: NextPage = () => {
+  const isBreakpoint = useMediaQuery(600)
+
   return (
-    <Container>
-      <Image src="/L-shape_90x90.svg"
-        alt="L shaped design element"
-        width="90" height="90"
-        ></Image>
-      <Squiggle>
-        <Image src="/squiggle_180x45.svg"
-          alt="Squiggle Retro bus shape"
-          width="180" height="45"
-          ></Image>
-        </Squiggle>
-      <MainBlock>
-        <AdviceCard ></AdviceCard>
-      </MainBlock>
-      <LowerContainer>
-        <Image src="/dots_90x90.svg"
-          alt="design element, 12 dots in a grid"
-          width="180" height="180"
-          ></Image>
-        <Image src="/Ring_300x100.svg"
-          alt="design element, half of a ring"
-          width="300" height="100"
-          ></Image>
-      </LowerContainer>
-    </Container>
+    <>{ isBreakpoint ? (
+      <MobileContainer>
+        <AdviceCard></AdviceCard>
+      </MobileContainer>
+      ) : (
+        <Container>
+          <Image src="/L-shape_90x90.svg"
+            alt="L shaped design element"
+            width="90" height="90"
+            ></Image>
+          <Squiggle>
+            <Image src="/squiggle_180x45.svg"
+              alt="Squiggle Retro bus shape"
+              width="180" height="45"
+              ></Image>
+            </Squiggle>
+          <MainBlock>
+            <AdviceCard ></AdviceCard>
+          </MainBlock>
+          <LowerContainer>
+            <Image src="/dots_90x90.svg"
+              alt="design element, 12 dots in a grid"
+              width="180" height="180"
+              ></Image>
+            <Image src="/Ring_300x100.svg"
+              alt="design element, half of a ring"
+              width="300" height="100"
+              ></Image>
+          </LowerContainer>
+        </Container>
+      )}
+    </>
   )
 }
 
